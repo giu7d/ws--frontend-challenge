@@ -23,6 +23,14 @@ export const GlobalStyle = createGlobalStyle<IDefaultStyledProps>`
 		height: 100%;
 	}
 
+	input,
+	textarea,
+	button,
+	select,
+	a {
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+	}
+
 	button {
 		border: none;
 		cursor: pointer;
@@ -33,7 +41,6 @@ export const GlobalStyle = createGlobalStyle<IDefaultStyledProps>`
 		-moz-user-select: none;
 		-ms-user-select: none;
 		user-select: none;
-		-webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
 		transition: 300ms opacity ease-out;
 		background-color: inherit;
 
