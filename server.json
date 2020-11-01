@@ -1,0 +1,55 @@
+{
+	"customer": {
+		"id": 0,
+		"avatar": "https://placeholder.com/150",
+		"firstName": "justine",
+		"lastName": "justine",
+		"company": "ACME Inc.",
+		"isActive": true,
+		"addresses": [
+			{
+				"type": "work",
+				"street": "avenida brasil",
+				"number": "4019",
+				"uf": "PR",
+				"cep": "00000-000",
+				"city": "cascavel"
+			}
+		],
+		"contact": {
+			"phones": [
+				{
+					"value": "45995555555",
+					"type": "work"
+				}
+			],
+			"emails": [
+				{
+					"value": "justine@email.com",
+					"type": "work"
+				}
+			],
+			"facebookURL": "",
+			"instagramURL": "",
+			"whatsAppURL": "",
+			"twitterURL": "",
+			"linkedInURL": ""
+		}
+	},
+	"indicators": [
+		{
+			"id": 0,
+			"title": "Oportunidades",
+			"extra": 7,
+			"items": [
+				{
+					"id": 0,
+					"title": "ganhas",
+					"value": 20000.0,
+					"quantity": 4
+				}
+			]
+		}
+	],
+	"activities": []
+}

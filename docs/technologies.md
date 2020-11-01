@@ -21,4 +21,8 @@ Técnologias utilizadas no desenvolvimento da aplicação.
 
 - [] Styled Components
 
+## Mock & Testing
+
+- [x] [JSON Server](https://github.com/typicode/json-server)
+
 ...
