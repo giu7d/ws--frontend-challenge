@@ -34,17 +34,22 @@ export const GlobalStyle = createGlobalStyle<IDefaultStyledProps>`
 		-ms-user-select: none;
 		user-select: none;
 		-webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
-		transition: 300ms all ease-out;
+		transition: 300ms opacity ease-out;
+		background-color: inherit;
 
 		::-moz-focus-inner {
 			border: none;
 		}
 
+		:active {
+			transition: 300ms opacity ease-out;
+			border-style: none;
+		}
+
+		:hover {	
+			opacity: 0.75; 
+			transition: 300ms opacity ease-out;
+		}
 		
-  :active {
-    opacity: 0.5; 
-		transition: 300ms all ease-out;
-		border-style: none;
-  }
 	}
 `;
