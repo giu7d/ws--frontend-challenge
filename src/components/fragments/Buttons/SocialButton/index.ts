@@ -6,8 +6,11 @@ interface ISocialButtonProps {
 }
 
 export const SocialButton = styled.button<ISocialButtonProps>`
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	padding: 14px;
-	aspect-ratio: 1 / 1;
+	font-size: 2rem;
 	border-radius: ${({ theme }) => theme.roundness * 2}px;
 	color: #ffffff;
 	background-color: ${({ backgroundColor = "#333" }) => backgroundColor};

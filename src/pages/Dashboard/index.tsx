@@ -1,4 +1,5 @@
 import React from "react";
+import { Indicators } from "../../components/containers/Indicators";
 import { Information } from "../../components/containers/Information";
 
 import { ProfileContainer } from "../../components/containers/Profile";
@@ -15,7 +16,7 @@ export const Dashboard: React.FC = () => {
 					<Information />
 				</Tab>
 				<Tab title="Indicadores">
-					<div>Indicadores</div>
+					<Indicators />
 				</Tab>
 				<Tab title="Atividade">
 					<div>Atividade</div>
