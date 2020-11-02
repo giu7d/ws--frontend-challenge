@@ -18,7 +18,7 @@ export const Badge = styled.span<IBadgeProps>`
 	font-weight: 600;
 	font-size: 2rem;
 
-	color: ${({ theme, color = "primary" }) => darken(0.2, theme.colors[color])};
+	color: ${({ theme, color = "primary" }) => darken(0.25, theme.colors[color])};
 	background-color: ${({ theme, color = "primary" }) =>
 		rgba(theme.colors[color], 0.25)};
 
