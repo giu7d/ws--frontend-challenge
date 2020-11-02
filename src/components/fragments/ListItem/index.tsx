@@ -11,12 +11,16 @@ interface IListItemProps {
 
 export const ListItem: React.FC<IListItemProps> = ({
 	title,
-	observation = null,
 	subtitle = null,
+	observation = null,
 	icon = null,
 }) => {
+	const handleCopy = () => {
+		navigator.clipboard.writeText(title);
+	};
+
 	return (
-		<Wrapper>
+		<Wrapper onClick={handleCopy}>
 			{icon && <div className="icon">{icon}</div>}
 			<div className="content">
 				<h4>{title}</h4>
