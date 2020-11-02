@@ -16,13 +16,13 @@ export const Card: React.FC<IProps> = ({
 }) => {
 	return (
 		<Wrapper>
-			<div className="header">
+			<div className="card-header">
 				<h4>{title}</h4>
-				<IconButton onClick={onClick} className="icon">
+				<IconButton onClick={onClick} className="card-icon">
 					<FiMoreVertical />
 				</IconButton>
 			</div>
-			<div className="content">{children}</div>
+			<div className="card-content">{children}</div>
 		</Wrapper>
 	);
 };

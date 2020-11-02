@@ -6,7 +6,7 @@ export const Wrapper = styled.div<IDefaultStyledProps>`
 	flex-direction: column;
 	align-items: center;
 
-	.fullName {
+	.profile-fullName {
 		margin: 4px 0;
 		font-size: 3rem;
 		font-weight: 600;
@@ -14,7 +14,7 @@ export const Wrapper = styled.div<IDefaultStyledProps>`
 		color: ${({ theme }) => theme.colors.text};
 	}
 
-	.companyName {
+	.profile-companyName {
 		margin: 4px 0;
 		font-size: 2rem;
 		font-weight: normal;

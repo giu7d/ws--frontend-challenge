@@ -5,16 +5,17 @@ import Ripples from "react-ripples";
 export const Wrapper = styled(Ripples)<IDefaultStyledProps>`
 	display: flex;
 	flex-direction: row;
+	padding: 8px;
 	width: 100%;
 	align-items: center;
 	justify-content: flex-start;
 	border-radius: ${({ theme }) => theme.roundness}px;
 
-	.icon {
+	.li-icon {
 		margin-right: 14px;
 	}
 
-	.content {
+	.li-content {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;

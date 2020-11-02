@@ -21,8 +21,8 @@ export const ListItem: React.FC<IListItemProps> = ({
 
 	return (
 		<Wrapper onClick={handleCopy}>
-			{icon && <div className="icon">{icon}</div>}
-			<div className="content">
+			{icon && <div className="li-icon">{icon}</div>}
+			<div className="li-content">
 				<h4>{title}</h4>
 				{subtitle && <h5>{subtitle}</h5>}
 				{observation && <small>{observation}</small>}

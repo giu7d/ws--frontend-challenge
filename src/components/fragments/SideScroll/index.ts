@@ -6,6 +6,7 @@ export const SideScroll = styled.div<IDefaultStyledProps>`
 	flex-direction: row;
 	max-width: 100%;
 	overflow-x: auto;
+	overflow-y: visible;
 
 	::-webkit-scrollbar {
 		display: none;

@@ -9,7 +9,7 @@ export const Wrapper = styled.div<IDefaultStyledProps>`
 	border-radius: ${({ theme }) => theme.roundness}px;
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 
-	.header {
+	.card-header {
 		display: flex;
 		flex-direction: row;
 		align-items: center;
@@ -24,12 +24,12 @@ export const Wrapper = styled.div<IDefaultStyledProps>`
 			margin-left: 8px;
 		}
 
-		.icon {
+		.card-icon {
 			color: ${({ theme }) => rgba(theme.colors.text, 0.5)};
 		}
 	}
 
-	.content {
+	.card-content {
 		margin: 0 14px 24px 14px;
 	}
 `;

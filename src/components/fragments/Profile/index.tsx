@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Avatar } from "../Avatar";
-import { Badge } from "../Badge";
+import { Badge } from "../Badges/Badge";
 import { Wrapper } from "./styles";
 
 interface IProfileProps {
@@ -15,8 +15,8 @@ export const Profile: React.FC<IProfileProps> = (props) => {
 	return (
 		<Wrapper>
 			<Avatar src={props.avatar} />
-			<h2 className="fullName">{props.fullName}</h2>
-			<h3 className="companyName">{props.companyName}</h3>
+			<h2 className="profile-fullName">{props.fullName}</h2>
+			<h3 className="profile-companyName">{props.companyName}</h3>
 			{props.isActive ? (
 				<Badge color="success">Ativo</Badge>
 			) : (
