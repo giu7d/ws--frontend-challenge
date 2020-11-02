@@ -1,11 +1,13 @@
 {
 	"customer": {
 		"id": 0,
-		"avatar": "https://placeholder.com/150",
+		"avatar": "https://avmstorage.blob.core.windows.net/ws-chalange/avatar.png",
 		"firstName": "justine",
-		"lastName": "justine",
+		"lastName": "ipsum",
 		"company": "ACME Inc.",
-		"isActive": true,
+		"isActive": true
+	},
+	"information": {
 		"addresses": [
 			{
 				"type": "work",
@@ -29,27 +31,171 @@
 					"type": "work"
 				}
 			],
-			"facebookURL": "",
-			"instagramURL": "",
-			"whatsAppURL": "",
-			"twitterURL": "",
-			"linkedInURL": ""
+			"facebookURL": "https://www.facebook.com/",
+			"instagramURL": "https://www.instagram.com/",
+			"twitterURL": "https://twitter.com/",
+			"linkedInURL": "http://linkedin.com/"
 		}
 	},
 	"indicators": [
 		{
 			"id": 0,
-			"title": "Oportunidades",
-			"extra": 7,
+			"type": "credit-limit",
 			"items": [
 				{
 					"id": 0,
-					"title": "ganhas",
+					"description": "concedido",
+					"value": 12000.0
+				},
+				{
+					"id": 1,
+					"description": "disponível",
+					"value": 3105.0,
+					"color": "success"
+				}
+			]
+		},
+		{
+			"id": 1,
+			"type": "finance-title",
+			"items": [
+				{
+					"id": 0,
+					"description": "Vencidos",
+					"value": 3105.0,
+					"quantity": 4,
+					"color": "danger"
+				},
+				{
+					"id": 1,
+					"description": "A vencer",
+					"value": 3105.0,
+					"quantity": 1,
+					"color": "warn"
+				},
+				{
+					"id": 2,
+					"description": "Pagos",
+					"value": 3105.0,
+					"quantity": 3,
+					"color": "success"
+				}
+			]
+		},
+		{
+			"id": 2,
+			"type": "sells",
+			"items": [
+				{
+					"id": 0,
+					"sells": 100,
+					"date": "2020-11-02T20:05:03.037Z"
+				},
+				{
+					"id": 1,
+					"sells": 200,
+					"date": "2020-11-05T20:05:03.037Z"
+				},
+				{
+					"id": 2,
+					"sells": 150,
+					"date": "2020-11-07T20:05:03.037Z"
+				},
+				{
+					"id": 3,
+					"sells": 50,
+					"date": "2020-11-15T20:05:03.037Z"
+				}
+			]
+		},
+		{
+			"id": 3,
+			"type": "opportunities",
+			"extra": 8,
+			"items": [
+				{
+					"id": 0,
+					"description": "Ganhas",
 					"value": 20000.0,
-					"quantity": 4
+					"quantity": 4,
+					"color": "success"
+				},
+				{
+					"id": 1,
+					"description": "Perdida",
+					"value": 4300.0,
+					"quantity": 1,
+					"color": "danger"
+				},
+				{
+					"id": 2,
+					"description": "Abertas",
+					"value": "Diversas moedas",
+					"quantity": 1,
+					"color": "warn"
+				},
+				{
+					"id": 3,
+					"description": "Descartadas",
+					"value": "-",
+					"quantity": 0,
+					"color": "text"
 				}
 			]
 		}
 	],
-	"activities": []
+	"activities": {
+		"filters": [
+			{
+				"id": 0,
+				"value": 25,
+				"title": "Total",
+				"color": "primary"
+			},
+			{
+				"id": 1,
+				"value": 1,
+				"title": "Atraso",
+				"color": "danger"
+			},
+			{
+				"id": 2,
+				"value": 0,
+				"title": "Previstas",
+				"color": "warn"
+			},
+			{
+				"id": 3,
+				"value": 24,
+				"title": "Completas",
+				"color": "success"
+			}
+		],
+		"items": [
+			{
+				"id": 0,
+				"title": "Agendamento de reunião",
+				"subtitle": "Erica Silva",
+				"time": "4 dias de atraso",
+				"type": "call",
+				"status": "delay"
+			},
+			{
+				"id": 1,
+				"title": "Agendamento de reunião",
+				"subtitle": "Erica Silva",
+				"time": "4 dias de atraso",
+				"type": "appointment",
+				"status": "pending"
+			},
+			{
+				"id": 2,
+				"title": "Agendamento de reunião",
+				"subtitle": "Erica Silva",
+				"time": "4 dias de atraso",
+				"type": "mail",
+				"status": "done"
+			}
+		]
+	}
 }
