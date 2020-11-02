@@ -7,7 +7,7 @@ interface IActivitiesFiltersProps {
 	items: {
 		title: string;
 		value: number;
-		color: string;
+		color?: string;
 	}[];
 }
 

@@ -1,42 +1,44 @@
 {
-	"customer": {
-		"id": 0,
-		"avatar": "https://avmstorage.blob.core.windows.net/ws-chalange/avatar.png",
-		"firstName": "justine",
-		"lastName": "ipsum",
-		"company": "ACME Inc.",
-		"isActive": true
-	},
-	"information": {
-		"addresses": [
-			{
-				"type": "work",
-				"street": "avenida brasil",
-				"number": "4019",
-				"uf": "PR",
-				"cep": "00000-000",
-				"city": "cascavel"
+	"customer": [
+		{
+			"id": 0,
+			"avatar": "https://avmstorage.blob.core.windows.net/ws-chalange/avatar.png",
+			"firstName": "justine",
+			"lastName": "ipsum",
+			"company": "ACME Inc.",
+			"isActive": true,
+			"addresses": [
+				{
+					"type": "work",
+					"street": "avenida brasil",
+					"number": "4019",
+					"uf": "PR",
+					"cep": "00000-000",
+					"city": "cascavel"
+				}
+			],
+			"contact": {
+				"phones": [
+					{
+						"value": "45995555555",
+						"type": "Celular"
+					}
+				],
+				"emails": [
+					{
+						"value": "justine@email.com",
+						"type": "work"
+					}
+				],
+				"socialNetworks": {
+					"facebookURL": "https://www.facebook.com/",
+					"instagramURL": "https://www.instagram.com/",
+					"twitterURL": "https://twitter.com/",
+					"linkedInURL": "http://linkedin.com/"
+				}
 			}
-		],
-		"contact": {
-			"phones": [
-				{
-					"value": "45995555555",
-					"type": "work"
-				}
-			],
-			"emails": [
-				{
-					"value": "justine@email.com",
-					"type": "work"
-				}
-			],
-			"facebookURL": "https://www.facebook.com/",
-			"instagramURL": "https://www.instagram.com/",
-			"twitterURL": "https://twitter.com/",
-			"linkedInURL": "http://linkedin.com/"
 		}
-	},
+	],
 	"indicators": [
 		{
 			"id": 0,

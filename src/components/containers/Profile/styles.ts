@@ -13,4 +13,10 @@ export const Wrapper = styled.div<IDefaultStyledProps>`
 	.content {
 		margin-top: -64px;
 	}
+
+	.profile-shimmer {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 `;
