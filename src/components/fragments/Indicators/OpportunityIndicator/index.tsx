@@ -5,30 +5,52 @@ import { Button } from "../../Buttons/Button";
 import { Card } from "../../Card";
 import { ItemsWrapper, ActionsWrapper } from "./styles";
 
-export const OpportunityIndicator: React.FC = () => {
+interface IOpportunityIndicatorProps {
+	quantity?: number;
+	data: {
+		id: string;
+		description: string;
+		value: number | string;
+		quantity: number;
+		color?: string;
+	}[];
+}
+
+export const OpportunityIndicator: React.FC<IOpportunityIndicatorProps> = ({
+	quantity,
+	data,
+}) => {
 	return (
 		<Card
 			title={
 				<>
 					<span>Oportunidades</span>
-					<Badge>9</Badge>
+					{quantity && <Badge>{quantity}</Badge>}
 				</>
 			}
 		>
 			<ItemsWrapper>
-				<BadgeWithText badgeValue="25" title="Ganhas" value="R$ 1.000,00" />
-				<BadgeWithText
-					badgeValue="15"
-					badgeColor="danger"
-					title="Perdidas"
-					value="R$ 4.300,00"
-				/>
-				<BadgeWithText
-					badgeValue="5"
-					badgeColor="warn"
-					title="Abertas"
-					value="Diversas moedas"
-				/>
+				{data.map((item) => (
+					<BadgeWithText
+						key={item.id}
+						badgeValue={item.quantity.toString()}
+						title={item.description}
+						value={item.value.toLocaleString("pt-BR", {
+							style: "currency",
+							currency: "BRL",
+						})}
+						badgeColor={
+							item.color as
+								| "text"
+								| "background"
+								| "foreground"
+								| "primary"
+								| "success"
+								| "warn"
+								| "danger"
+						}
+					/>
+				))}
 			</ItemsWrapper>
 			<ActionsWrapper>
 				<Button>Ver mais</Button>

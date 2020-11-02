@@ -11,34 +11,18 @@ import { useTheme } from "styled-components";
 
 import { Card } from "../../Card";
 
-interface ISellsByTime {
-	sells: number;
-	date: string;
+interface ISellsChartIndicator {
+	data: {
+		sells: number;
+		date: string;
+	}[];
 }
 
-export const SellsChartIndicator: React.FC = () => {
+export const SellsChartIndicator: React.FC<ISellsChartIndicator> = ({
+	data,
+}) => {
 	const theme = useTheme() as ITheme;
-	const memorizedData = useMemo<ISellsByTime[]>(
-		() => [
-			{
-				sells: Math.floor(100 * Math.random() * 10),
-				date: new Date(2020, 20, 12).toDateString(),
-			},
-			{
-				sells: Math.floor(200 * Math.random() * 10),
-				date: new Date(2020, 20, 13).toDateString(),
-			},
-			{
-				sells: Math.floor(150 * Math.random() * 10),
-				date: new Date(2020, 20, 14).toDateString(),
-			},
-			{
-				sells: Math.floor(50 * Math.random() * 10),
-				date: new Date(2020, 20, 18).toDateString(),
-			},
-		],
-		[]
-	);
+	const memorizedData = useMemo(() => [...data], [data]);
 
 	const handleTickFormat = (data: string) => {
 		const date = new Date(data);

@@ -43,5 +43,6 @@ export const Item = styled.div<IItemProps>`
 		overflow: hidden;
 		white-space: nowrap;
 		text-overflow: ellipsis;
+		text-transform: capitalize;
 	}
 `;

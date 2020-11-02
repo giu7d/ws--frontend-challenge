@@ -22,9 +22,11 @@ export const Wrapper = styled.div<IWrapperProps>`
 	display: flex;
 	flex-direction: row;
 	width: fit-content;
+	max-width: 50%;
+
 	border-radius: ${({ theme }) => theme.roundness}px;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-start;
 
 	box-shadow: ${({ theme, dropShadow }) => {
 		if (dropShadow) {

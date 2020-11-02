@@ -3,18 +3,44 @@ import React from "react";
 import { Card } from "../../Card";
 import { ItemsWrapper, Item } from "./styles";
 
-export const CreditLimitIndicator: React.FC = () => {
+interface ICreditLimitIndicatorProps {
+	data: {
+		id: string;
+		description: string;
+		value: number;
+		color?: string;
+	}[];
+}
+
+export const CreditLimitIndicator: React.FC<ICreditLimitIndicatorProps> = ({
+	data,
+}) => {
 	return (
 		<Card title="Títulos Financeiros">
 			<ItemsWrapper>
-				<Item color="primary">
-					<h4>R$ 12.000,20</h4>
-					<small>Concedido</small>
-				</Item>
-				<Item color="success">
-					<h4>R$ 3.105,00</h4>
-					<small>Disponível</small>
-				</Item>
+				{data.map(({ id, description, value, color }) => (
+					<Item
+						key={id}
+						color={
+							color as
+								| "text"
+								| "background"
+								| "foreground"
+								| "primary"
+								| "success"
+								| "warn"
+								| "danger"
+						}
+					>
+						<h4>
+							{value.toLocaleString("pt-BR", {
+								style: "currency",
+								currency: "BRL",
+							})}
+						</h4>
+						<small>{description}</small>
+					</Item>
+				))}
 			</ItemsWrapper>
 		</Card>
 	);

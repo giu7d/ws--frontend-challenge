@@ -3,28 +3,43 @@ import { BadgeWithText } from "../../Badges/BadgeWithText";
 import { Card } from "../../Card";
 import { ItemsWrapper } from "./styles";
 
-export const FinanceTitleIndicator: React.FC = () => {
+interface IFinanceTitleIndicatorProps {
+	data: {
+		id: string;
+		value: number | string;
+		quantity: number;
+		description: string;
+		color?: string;
+	}[];
+}
+
+export const FinanceTitleIndicator: React.FC<IFinanceTitleIndicatorProps> = ({
+	data,
+}) => {
 	return (
 		<Card title="Títulos Financeiros">
 			<ItemsWrapper>
-				<BadgeWithText
-					badgeValue="1"
-					badgeColor="danger"
-					title="R$ 3.105,00"
-					value="Vencidos"
-				/>
-				<BadgeWithText
-					badgeValue="2"
-					badgeColor="warn"
-					title="R$ 3.105,00"
-					value="A vencer"
-				/>
-				<BadgeWithText
-					badgeValue="5"
-					badgeColor="success"
-					title="R$ 3.105,00"
-					value="Pagos"
-				/>
+				{data.map(({ id, value, quantity, description, color }) => (
+					<BadgeWithText
+						key={id}
+						badgeValue={quantity.toString()}
+						badgeColor={
+							color as
+								| "text"
+								| "background"
+								| "foreground"
+								| "primary"
+								| "success"
+								| "warn"
+								| "danger"
+						}
+						title={value.toLocaleString("pt-BR", {
+							style: "currency",
+							currency: "BRL",
+						})}
+						value={description}
+					/>
+				))}
 			</ItemsWrapper>
 		</Card>
 	);
