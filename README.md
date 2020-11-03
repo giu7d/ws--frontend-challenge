@@ -6,6 +6,7 @@ Este repositório contem o projeto de front-end desenvolvido para o desafio de f
 
 1. [Introdução](##Introdução)
 1. [Técnologias](./docs/technologies.md)
+1. [Justificativas técnicas](./docs/about.md)
 
 ## Introdução
 
@@ -30,6 +31,16 @@ cd ws--frontend-challenge
 yarn
 # ou
 npm install
+```
+
+#### Iniciar servidor de mock
+
+Após instalar as dependências inicie o servidor de mock em um terminal separado.
+
+```bash
+yarn start
+# ou
+npm start
 ```
 
 #### Executar aplicação

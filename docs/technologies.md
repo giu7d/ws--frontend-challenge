@@ -5,7 +5,6 @@ Técnologias utilizadas no desenvolvimento da aplicação.
 ## Frameworks
 
 - [x] [ReactJS (SPA)](https://github.com/facebook/react)
-- [x] [Jest (Testing)](https://github.com/facebook/jest)
 
 ## Boilerplate
 
@@ -19,10 +18,16 @@ Técnologias utilizadas no desenvolvimento da aplicação.
 
 ## Styling & Components
 
-- [] Styled Components
+- [x] [Styled Components](https://github.com/styled-components/styled-components)
+- [x] [Polished](https://github.com/styled-components/polished)
+- [x] [Framer Motion](https://github.com/framer/motion)
+- [x] [Recharts](https://github.com/recharts/recharts)
+
+## HTTP Clients & Utils
+
+- [x] [SWR](https://github.com/vercel/swr)
+- [x] [Axios](https://github.com/axios/axios)
 
 ## Mock & Testing
 
 - [x] [JSON Server](https://github.com/typicode/json-server)
-
-...

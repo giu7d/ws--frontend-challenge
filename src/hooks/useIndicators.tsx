@@ -8,7 +8,6 @@ export const useIndicators = () => {
 
 	return {
 		indicators: data as GenericIndicator[],
-		isLoading: !error && !data,
-		isError: error,
+		isLoading: error || !data,
 	};
 };

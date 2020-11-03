@@ -8,7 +8,6 @@ export const useAccount = (id = 0) => {
 
 	return {
 		account: data as Account,
-		isLoading: !error && !data,
-		isError: error,
+		isLoading: error || !data,
 	};
 };

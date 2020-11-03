@@ -8,7 +8,6 @@ export const useActivities = () => {
 
 	return {
 		activities: data as Activities,
-		isLoading: !error && !data,
-		isError: error,
+		isLoading: error || !data,
 	};
 };
