@@ -1,28 +1,30 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+
 import { Activities } from "../../components/containers/Activities";
 import { Indicators } from "../../components/containers/Indicators";
 import { Information } from "../../components/containers/Information";
-
+import { PlaceInformation } from "../../components/containers/PlaceInformation";
 import { ProfileContainer } from "../../components/containers/Profile";
-import { Tabs } from "../../components/containers/Tabs";
-import { Tab } from "../../components/fragments/Tab";
+import { DashboardLayout } from "../../components/layouts/DashboardLayout";
 import { Wrapper } from "./styles";
 
 export const Dashboard: React.FC = () => {
+	const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+	useEffect(() => {
+		window.addEventListener("resize", () => setWindowWidth(window.innerWidth));
+	}, []);
+
 	return (
 		<Wrapper>
-			<ProfileContainer />
-			<Tabs>
-				<Tab title="Informações">
-					<Information />
-				</Tab>
-				<Tab title="Indicadores">
-					<Indicators />
-				</Tab>
-				<Tab title="Atividades">
-					<Activities />
-				</Tab>
-			</Tabs>
+			<DashboardLayout
+				isMobile={windowWidth <= 760}
+				profile={<ProfileContainer />}
+				information={<Information />}
+				placeInformation={<PlaceInformation />}
+				indicators={<Indicators />}
+				activities={<Activities />}
+			/>
 		</Wrapper>
 	);
 };

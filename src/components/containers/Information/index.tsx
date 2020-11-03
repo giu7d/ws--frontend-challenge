@@ -4,7 +4,6 @@ import {
 	FiInstagram,
 	FiLinkedin,
 	FiMail,
-	FiMapPin,
 	FiPhone,
 	FiTwitter,
 } from "react-icons/fi";
@@ -69,16 +68,6 @@ export const Information: React.FC = () => {
 					)}
 				</SideScroll>
 			)}
-			<h4 className="sub-session">Local</h4>
-			{account.addresses.map((address, index) => (
-				<ListItem
-					key={index}
-					icon={<FiMapPin opacity={0.5} size={24} />}
-					title={`${address.street}, ${address.number}`}
-					subtitle={`${address.city} - ${address.uf}`}
-					observation={address.type}
-				/>
-			))}
 		</Wrapper>
 	);
 };

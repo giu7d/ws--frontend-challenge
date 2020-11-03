@@ -21,4 +21,7 @@ export const Wrapper = styled.div<IDefaultStyledProps>`
 			margin-left: 24px;
 		}
 	}
+
+	@media only screen and (min-width: 760px) {
+	}
 `;
